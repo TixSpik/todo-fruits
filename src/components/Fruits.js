@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { addFruit } from '../redux/actions/fruitsActions'
 
 const Fruits = ({ fruits, addFruit }) => {
-  
+
   const handlerSubmit = (e) => {
     e.preventDefault()
 
@@ -13,7 +13,7 @@ const Fruits = ({ fruits, addFruit }) => {
 
     addFruit(fruit)
   }
-  
+
   return (
     <div>
       <h1>Fruits</h1>
@@ -26,10 +26,10 @@ const Fruits = ({ fruits, addFruit }) => {
           Agregar
         </button>
       </form>
-      <ul>
+      <ul style={{ backgroundColor: '#000' }}>
         {fruits.map((fruit, index) => (
           <li key={fruit + index}>
-            { fruit }
+            {fruit}
           </li>
         ))}
       </ul>

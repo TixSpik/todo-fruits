@@ -26,11 +26,10 @@ const Todos = ({ todo, addTodo, updateTodo, deleteTodo }) => {
 
             <TodoForm AddTodo={AddTodo} />
 
-            <ul>
+            <ul style={{ backgroundColor: 'grey' }}>
                 {todo.todos.map(todo => (
                     <React.Fragment key={todo.id}>
                         <TodoList todo={todo} updateTodo={updateTodo} deleteTodo={deleteTodo} />
-
                     </React.Fragment>
                 ))}
             </ul>
